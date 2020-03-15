@@ -1,0 +1,18 @@
+
+<div  data-aos="fade-up" data-aos-easing="ease-in-sine" data-aos-once="true" data-aos-delay="1500" >
+    
+<h1 class="testimonialHeading">WHAT OUR CUSTOMERS SAY:</h1>
+
+<div dir = "ltr" fxLayout="row" fxLayout.xs = "column" fxLayoutAlign="center" fxLayoutGap = "5%">
+    <div *ngFor = "let card of cards" [fxFlex.gt-xs]="regularDistribution">
+        <figure class="snip1192">
+            <blockquote>{{card.description}}</blockquote>
+            <div class="author">
+              <img [src]="card.img" alt="testimonial"/>
+              <h5>{{card.name}}<span>{{card.location}}</span></h5>
+            </div>
+          </figure>
+    </div>
+
+</div>
+</div>
