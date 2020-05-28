@@ -27,8 +27,8 @@ regularDistribution = 100/3 + '%';
     {
       location: 'Pennsylvania,USA',
       description: 'As a someone who has immigrated recently and is not able to get my parents back here to the US, Lealdeals has been a lifesaver. Their Parent Care packages allow me to pay for electricity and water bills for my parents remotely, and I can rest assured that help is just one phone call away incase of an emergency.',
-      name: 'Dr. Lorem Ipsum',
-      img: '../assets/apartment.jpg'
+      name: 'Dr. Vitasta Bambezai',
+      img: '../assets/shashiTestimonials.jpg'
     }
 
   ];
