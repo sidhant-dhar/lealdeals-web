@@ -1,6 +1,6 @@
 import { Component, HostListener, Inject} from '@angular/core';
 import { ScrollDispatcher } from '@angular/cdk/scrolling';
-import { DOCUMENT } from "@angular/common";
+import { DOCUMENT } from '@angular/common';
 import * as AOS from 'aos';
 
 
@@ -11,24 +11,23 @@ import * as AOS from 'aos';
 })
 export class AppComponent {
   title = 'lealdeals';
-  regularDistribution = 100/3 + "%";
+  regularDistribution = 100 / 3 + '%';
   constructor(private scrollDispatcher: ScrollDispatcher, @Inject(DOCUMENT) private document: Document) {
   }
 
   @HostListener('window:scroll', [])
 
   onWindowScroll() {
-    if (document.body.scrollTop > 200 ||     
+    if (document.body.scrollTop > 200 ||
     document.documentElement.scrollTop > 200) {
       document.getElementById('headerId').classList.add('active');
-        }
-    else {
+        } else {
       document.getElementById('headerId').classList.remove('active');
     }
   }
 
   scroll(el: HTMLElement) {
-    el.scrollIntoView({behavior:"smooth"});
+    el.scrollIntoView({behavior: 'smooth'});
 }
 
 cards = [
