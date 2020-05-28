@@ -1,0 +1,326 @@
+.header-fixed {
+    position: fixed;
+    background-color: transparent;
+    padding: 20px 40px;
+    height: 80px;
+    z-index: 10000;
+      /* color: #ffffff; */
+      box-sizing: border-box;
+    top:0;
+    width: 100%;
+  
+      -webkit-transition:top 0.3s;
+      transition:top 0.3s;
+  }
+  
+  .header-fixed .header-limiter {
+      max-width: 1200px;
+      text-align: center;
+      margin: 0 auto;
+  }
+  
+  /*	The header placeholder. It is displayed when the header is fixed to the top of the
+      browser window, in order to prevent the content of the page from jumping up. */
+  
+  .header-fixed-placeholder{
+      height: 80px;
+      display: none;
+  }
+  
+  /* Logo */
+  
+  .header-fixed .header-limiter {
+      float: left;
+  }
+  
+  .headerimg{
+    width: 6%;
+    float: left;
+    margin-left: 2%;
+  }
+  
+  /* The navigation links */
+  
+  .header-fixed .header-limiter button {
+      color: #ffffff;
+    text-decoration: none;
+    border: none;
+    background: none;
+  }
+  
+  .header-fixed .header-limiter nav {
+      font:16px Arial, Helvetica, sans-serif;
+      line-height: 40px;
+      float: right;
+  }
+  
+  .header-fixed .header-limiter nav button{
+      display: inline-block;
+      padding: 0 10px;
+      text-decoration:none;
+      color: #ffffff;
+      opacity: 0.9;
+  }
+  
+  .header-fixed .header-limiter nav button:hover{
+      opacity: 1;
+  }
+  
+  .header-fixed .header-limiter nav button.selected {
+      color: #e23517;
+      opacity: 1;
+  }
+  
+  /* Fixed version of the header */
+  
+  body.fixed .header-fixed {
+      padding: 10px 40px;
+      height: 50px;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      z-index: 1;
+  }
+  
+  body.fixed .header-fixed-placeholder {
+      display: block;
+  }
+  
+  body.fixed .header-fixed .header-limiter h1 {
+      font-size: 24px;
+      line-height: 30px;
+  }
+  
+  body.fixed .header-fixed .header-limiter nav {
+      line-height: 28px;
+      font-size: 13px;
+  }
+  
+  
+  /* Making the header responsive */
+  
+  @media all and (max-width: 600px) {
+  
+      .header-fixed {
+          padding: 20px 0;
+          height: 75px;
+      }
+  
+      .header-fixed .header-limiter h1 {
+          float: none;
+          margin: -8px 0 10px;
+          text-align: center;
+          font-size: 24px;
+          line-height: 1;
+      }
+  
+      .header-fixed .header-limiter nav {
+          line-height: 1;
+          float:none;
+      }
+  
+      .header-fixed .header-limiter nav button {
+          font-size: 13px;
+      }
+  
+      body.fixed .header-fixed {
+          display: none;
+      }
+  
+  }
+
+/*************************Added on scroll************************/
+
+  .active {
+    background-color: #2c292f !important;
+    -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+}
+
+  
+  /* Header CSS end */
+
+
+
+
+
+
+
+  /******************** Carousel Button CSS**************************/
+
+  /**********************************************/
+
+
+/*********************************** Headings****************************************/
+
+@import '~compass-mixins/lib/compass/css3';
+
+
+.heading, .content {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.heading {
+  color: #5c5c5c;
+  width: 75%;
+  font-size: 4rem;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  font-weight: 500;
+  line-height: 1.7;
+  position: relative;
+  padding: 1.5em 0 3em;
+  font-family: 'Raleway', sans-serif;
+  overflow-wrap: break-word;
+  
+  &:before {
+    background: #fff;
+    display: block;
+    height: 1em;
+    width: 100%;
+    position: absolute;
+    content: " ";
+    bottom: 1.4em;
+    z-index: 1;
+  }
+
+  &:after {
+    @include background-image(radial-gradient(closest-side at 50% 40%, #E4E4E4, #ffffff));
+    bottom: .2em;
+    display: block;
+    height: 2em;
+    width: 100%;
+    position: absolute;
+    content: " ";
+  }
+}
+
+
+@media (max-width: 768px) {
+   .heading{
+    font-size: 2.5rem;
+   } 
+
+}
+
+
+/**************************************************************************/
+
+/****************************Covertext**********************************************/
+
+.covertext {
+    position: absolute; /* To make the div to be place anywhere. It is out of the document flow */
+    top: 20%; /* The distance between the div with the top of document */
+    left: 0px; /* Make the div full width */
+    right: 0px; /* Make the div full width */
+    z-index: 999;
+  }
+  
+  .title {
+    font-family: Verdana;
+    font-weight: 600;
+    font-size: 60px;
+    color: #ffffff;
+    text-align: center;
+  }
+  
+  .subtitle {
+    font-family: Verdana;
+    font-size: 23px;
+    color: #ffffff;
+    text-align: center;
+  }
+  
+  .explore {
+    text-align: center;
+    margin-top: 5%;
+  }
+  
+  .explore .btn-lg,
+  .explore .btn-lg:hover {
+    border-radius: 30px;
+    padding: 15px 25px;
+    font-size: 22px;
+    background-image: none;
+    background-color: #FF4000;
+    border-color: #FF4000;
+    color: #ffffff;
+  }
+  
+  .btn,
+  .btn:hover {
+    border-radius: 0px;
+    background-image: none;
+    background-color: #FF4000;
+    border-color: #FF4000;
+    color: #ffffff;
+    margin-bottom: 20px;
+    box-shadow: none;
+    outline: none;
+  }
+  
+  .btn:focus,
+  .btn:active:focus,
+  .btn.active:focus,
+  .btn.focus,
+  .btn:active.focus,
+  .btn.active.focus {
+    color: #ffffff;
+    outline: none;
+  }
+
+
+ /*****************************************Google Forms*******************************************/ 
+
+ .googleForm{
+     text-align: center;
+ }
+
+@media (max-width: 768px) and (min-width: 463px) {
+
+.title{
+    font-size: 35px;
+}
+
+.subtitle{
+    font-size: 15px;
+}
+
+.explore .btn-lg,
+  .explore .btn-lg:hover {
+    border-radius: 30px;
+    padding: 10px 15px;
+    font-size: 10px;
+  }
+
+}
+
+@media (max-width: 462px){
+    .title{
+        font-size: 25px;
+        padding-top: 5% ;
+    }
+    
+    .subtitle{
+        font-size: 10px;
+    }
+
+    .explore .btn-lg,
+  .explore .btn-lg:hover {
+    border-radius: 30px;
+    padding: 5px 10px;
+    font-size: 10px;
+  }
+    
+}
+
+
+.carouselImage{
+   overflow: hidden;
+    max-width: 100% !important;
+   
+    max-height: 100% !important;
+}

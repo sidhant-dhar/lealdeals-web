@@ -1,0 +1,12 @@
+
+<div dir = "ltr" fxLayout="row" fxLayout.xs = "column" fxLayoutAlign="center" fxLayoutGap = "5%">
+    <div *ngFor = "let card of cards" [fxFlex.gt-xs]="regularDistribution" >
+        <figure class="snip1192" style=" box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);">
+            <blockquote>{{card.description}}</blockquote>
+            <div class="author">
+              <img [src]="card.img" alt="testimonial"/>
+              <h5>{{card.name}}<span>{{card.location}}</span></h5>
+            </div>
+          </figure>
+    </div>
+</div>
