@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "docs",
+            "outputPath": "dist/lealdeals-sleek",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -44,6 +44,8 @@
           },
           "configurations": {
             "production": {
+
+              "baseHref": "/",
               "fileReplacements": [
                 {
                   "replace": "src/environments/environment.ts",
